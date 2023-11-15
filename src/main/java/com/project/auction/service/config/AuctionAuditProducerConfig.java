@@ -16,7 +16,7 @@ import java.util.Map;
 
 @EnableKafka
 @Configuration
-public class AuditProducerConfig {
+public class AuctionAuditProducerConfig {
 
     @Value("${spring.kafka.bootstrap-servers}")
     private String bootstrapServerConfig;

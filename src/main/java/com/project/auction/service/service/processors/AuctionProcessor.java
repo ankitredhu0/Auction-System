@@ -1,10 +1,11 @@
-package com.project.auction.service.service;
+package com.project.auction.service.service.processors;
 
 import com.project.auction.service.entity.ItemRecord;
 import com.project.auction.service.model.AuctionAuditMessage;
 import com.project.auction.service.model.AuctionState;
 import com.project.auction.service.repository.AuctionRepository;
 import com.project.auction.service.repository.ItemRepository;
+import com.project.auction.service.service.producers.AuctionAuditProducer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,16 +21,12 @@ import java.util.UUID;
 public class AuctionProcessor {
 
     @Autowired
-    private AuditProducer auditProducer;
+    private AuctionAuditProducer auditProducer;
 
     private static final Logger logger = LoggerFactory.getLogger(AuctionProcessor.class);
-
     public HashMap<Long, AuctionAuditMessage> itemBidAmountInfoMap = new HashMap<>();
     private final ItemRepository itemRepository;
     private final AuctionRepository auctionRepository;
-
-
-
 
     @Autowired
     public AuctionProcessor(ItemRepository itemRepository, AuctionRepository auctionRepository) {

@@ -1,4 +1,4 @@
-package com.project.auction.service.service;
+package com.project.auction.service.service.producers;
 
 import com.project.auction.service.model.AuctionAuditMessage;
 import org.slf4j.Logger;
@@ -9,9 +9,9 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AuditProducer {
+public class AuctionAuditProducer {
 
-    private static final Logger logger = LoggerFactory.getLogger(AuditProducer.class);
+    private static final Logger logger = LoggerFactory.getLogger(AuctionAuditProducer.class);
 
     @Value("${spring.kafka.auction.audit.topic}")
     private String auctionAuditTopic;
@@ -19,7 +19,7 @@ public class AuditProducer {
     private final KafkaTemplate<String, AuctionAuditMessage> kafkaTemplate;
 
     @Autowired
-    AuditProducer(KafkaTemplate<String, AuctionAuditMessage> auditProducerKafkaTemplate) {
+    AuctionAuditProducer(KafkaTemplate<String, AuctionAuditMessage> auditProducerKafkaTemplate) {
         this.kafkaTemplate = auditProducerKafkaTemplate;
     }
 

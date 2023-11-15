@@ -1,8 +1,9 @@
-package com.project.auction.service.service;
+package com.project.auction.service.service.consumers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.project.auction.service.model.BidRequest;
+import com.project.auction.service.service.processors.BidProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

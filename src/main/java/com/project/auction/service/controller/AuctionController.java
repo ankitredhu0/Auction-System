@@ -1,6 +1,6 @@
 package com.project.auction.service.controller;
 
-import com.project.auction.service.service.AuctionProcessor;
+import com.project.auction.service.service.processors.AuctionProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

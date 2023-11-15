@@ -3,6 +3,7 @@ package com.project.auction.service.service;
 import com.project.auction.service.entity.ItemRecord;
 import com.project.auction.service.repository.AuctionRepository;
 import com.project.auction.service.repository.ItemRepository;
+import com.project.auction.service.service.processors.AuctionProcessor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
